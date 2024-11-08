@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://icons.iconarchive.com/icons/colebemis/feather/256/moon-icon.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #706993;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: white;
+            font-size: 5vw;
+            text-shadow: 0 0 15px white, 0 0 25px white;
+            margin: 2rem 0;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        .btn {
+            background-color: #331E38;
+            color: white;
+            font-size: 1.8vw;
+            padding: 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 150px;
+            min-width: 120px;
+        }
+        .btn img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .btn:hover {
+            background-color: #4b2f58;
+        }
+        .go-back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #331E38;
+            color: white;
+            font-size: 1.4vw;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .go-back-btn:hover {
+            background-color: #4b2f58;
+        }
+    </style>
+    <title>Games</title>
+</head>
+<body>
+    <button class="go-back-btn" onclick="window.history.back()">Go Back</button>
+    <h1>Games</h1>
+    <div class="btn-container">
+        <button class="btn" onclick="openGame('https://mrmine.com/game/?nocache=1719462916')">
+            <img src="https://example.com/mrmine-logo.png" alt="MrMine Logo">
+            MrMine
+        </button>
+        <button class="btn" onclick="openGame('https://tunnelrush3.com/#google_vignette')">
+            <img src="https://example.com/tunnelrush-logo.png" alt="Tunnel Rush Logo">
+            Tunnel Rush
+        </button>
+        <button class="btn" onclick="openGame('https://idle-breakout.neocities.org/')">
+            <img src="https://example.com/idle-breakout-logo.png" alt="Idle Breakout Logo">
+            Idle Breakout
+        </button>
+    </div>
+
+    <script>
+        function openGame(url) {
+            var newWindow = window.open('about:blank', '_blank');
+            var iframe = newWindow.document.createElement('iframe');
+            iframe.src = url;
+            iframe.style.width = '100%';
+            iframe.style.height = '100vh';
+            iframe.style.border = 'none';
+            newWindow.document.body.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>
