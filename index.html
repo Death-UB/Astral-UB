@@ -1,1 +1,95 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://icons.iconarchive.com/icons/colebemis/feather/256/moon-icon.png" type="image/png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #706993;
+            text-align: center;
+        }
+        .glowing-circle {
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fff 10%, #ddd 50%, #bbb 100%);
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.8), 0 0 100px rgba(255, 255, 255, 0.6), 0 0 150px rgba(255, 255, 255, 0.4);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .black-circle {
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            clip-path: ellipse(60% 100% at 80% 50%);
+        }
+        h1 {
+            color: #fff;
+            font-size: 4vw;
+            text-shadow: 0 0 15px white, 0 0 25px white, 0 0 35px white, 0 0 45px white;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        p {
+            color: #706993;
+            font-size: 1.8vw;
+            margin-bottom: 2rem;
+            z-index: 2;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            z-index: 2;
+        }
+        button {
+            border-radius: 25px;
+            padding: 12px 24px;
+            font-size: 1.4vw;
+            border: none;
+            background-color: #331E38;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #4b2f58;
+        }
+    </style>
+    <title>Astral</title>
+</head>
+<body>
+    <div class="glowing-circle"></div>
+    <div class="black-circle"></div>
+    
+    <h1>Astral-UB</h1>
+    <p>This is the first version of my official site!</p>
+    <div class="buttons-container">
+        <a href="https://death-ub.w3spaces-preview.com/Games.html"><button>Games</button></a>
+        <a href="https://death-ub.w3spaces.com/proxies"><button onclick="alert('WIP!'); event.preventDefault();">Methods</button></a>
+        <a href="https://death-ub.w3spaces.com/update-log"><button onclick="alert('WIP!'); event.preventDefault();">Update Log</button></a>
+    </div>
+</body>
+</html>
